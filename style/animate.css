@@ -1,0 +1,12 @@
+
+.animate-modal{
+  position: relative;
+  animation-name:modal;
+  animation-duration: .5s;
+}
+@keyframes modal {
+  from{top:-115%;opacity: 0;}
+  to{top:0;opacity: 1;}
+}
+
+

@@ -1,0 +1,930 @@
+@charset "UTF-8";
+*{
+    scroll-behavior: smooth;
+}
+body{
+    background: -webkit-linear-gradient(bottom, #dbd2d2, #f35e9b, #fc3187, #424242);
+    background: -o-linear-gradient(bottom, #dbd2d2, #f35e9b, #fc3187, #424242);
+    background: linear-gradient(to top, #dbd2d2, #f35e9b, #fc3187, #424242); }
+}
+/*---------title and nav--------*/
+.header{}
+.roomrate-sub-header-nav{padding:0;margin:0 auto;}
+.logo{margin-top:30px;line-height:0.6;text-align: center;font-family:beach resort;}		
+.logo>h1>a>span{font-size: 85pt;}
+.navigation{font-size:10pt;margin:40px 0 20px 0;text-align: center;}
+.navigation>li{display: inline-block;text-transform: uppercase;}
+.navigation>li>a{border-right:1px solid #aaafff; margin-left:5px;padding-right: 20px;}
+.navigation>li>a:hover,.dropdown-content>a:hover,.dropdown-gallery>a:hover{text-shadow:0px 0px 10px white;color:orange;}
+.dropdown-gallery{margin-left:5px;text-transform: uppercase;text}
+.dropdown-gallery>a{color:#aaafff;}
+.dropdown-gallery>a::after{content: url(../image/arrow-down.png);background-size: 15px 15px;position: relative;top:6px;right: 3px;}
+.dropdown-content{z-index:1;text-align: left;position:absolute;background-color:rgba(0,1,0,0.5);display:none;border-radius: 4px;padding:10px;border:1px solid rgba(999,999,999,0.5);}
+.dropdown:hover .dropdown-content {cursor: pointer;display:block; overflow: auto;}
+a:visited{color:#aaafff}
+a:link{text-decoration-line: none;}
+
+/*---------RoomRates1--------*/
+.roomcard-flex{
+    display: flex;flex-wrap: wrap;
+    justify-content: space-around;
+}
+.modal-content{
+    margin: auto;
+}
+.roomcard-1{ padding:0px;  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); min-width: 250px; max-width: 600px;/transition: 0.3s; position:relative;background-color: #f4faf9;margin: 10px;}
+.roomcard-1:hover{/transition: .3s ease;box-shadow:0 0 20px #1f1f1f;}
+.image1{margin-left: 0px; margin-top: 0px;}
+.roomcard-container-1{padding: 2px 16px;}
+.roomNo{margin-left:19%; margin-bottom: 2%; margin-top: 2%; font-size: 18px; font-family: arial;}
+.captioncarina{font-family: arial; font-size: 24px;}
+.paragraphCarina{font-family:Arial Narrow; font-size: 20px;}
+.room-button1{margin-bottom: 4%; background-color: white; color: black; border: 2px solid #008CBA; width: 100%; height: 50px; border-radius: 2px;}
+.room-button1:hover{background-color: #008CBA;color: white;}
+
+
+
+/*---------RoomRates MODAL 1--------*/
+
+
+.carinaPhotos{margin-top: 10px; display: block;padding-left: 2px;padding-right: 2px; border:none;font-size: 11px;}
+fieldset{border:#fc3187 1px solid;border-radius: 5px;}
+legend{font-size: 24px; text-align: left;}
+.carinathumbnail1{margin:10px;  border: 1px solid #ddd; border-radius: 4px; padding: 5px;display:inline-block;position:relative;}
+.carinathumbnail1:hover{box-shadow: 0 0 2px 1px rgba(0,140,186,0.5);}
+.carinaIMG1{position: relative;text-align: center;font-size: 12px;}
+
+.carinathumbnail2{margin:10px;border: 1px solid #ddd; border-radius: 4px; padding: 5px; display:inline-block;position:relative;}
+.carinathumbnail2:hover{box-shadow: 0 0 2px 1px rgba(0,140,186,0.5);}
+.carinaIMG2{position: relative;}
+.carinaIMG2{text-align: center;font-size: 12px;}
+.carinathumbnail3{margin:10px;border: 1px solid #ddd; border-radius: 4px; padding: 5px;display:inline-block;position:relative;}
+.carinathumbnail3:hover{box-shadow: 0 0 2px 1px rgba(0,140,186,0.5);}
+.carinaIMG3{position: relative;}
+.carinaIMG3{text-align: center;font-size: 12px;}
+
+.carinathumbnail4{margin:10px;border: 1px solid #ddd; border-radius: 4px; padding: 5px;display:inline-block;position:relative;}
+.carinathumbnail4:hover{box-shadow: 0 0 2px 1px rgba(0,140,186,0.5);}
+.carinaIMG4{position: relative;}
+.carinaIMG4{text-align: center;font-size: 12px;}
+
+.Prices{color: red;}
+.labelpri{color: black;}
+/*---------veranda MODAL 1-----*/
+
+#carina1veranda{ border-radius: 5px; cursor: pointer; /transition: 0.3s;}
+#carina1veranda:hover{opacity: 0.7;}
+
+.carinaverandaMODAL{ display: none; position: fixed; z-index: 1; padding-top:200px; left: 0; top:0; width: 100%; height: 100%;overflow: auto; background-color: rgba(0,0,0,0.9); background-color: rgb(0,0,0); }
+.modladcontentcarinaveranda{ margin:auto; display: block; width: 80%; max-width: 700px;}
+#carinacaptionveranda{ font-family: arial; font-size: 30px; margin:auto; display: block; width: 80%; max-width: 700px; text-align: center;color: #ccc;padding: 10px 0;height: 150px;}
+/*.modladcontentcarinaveranda,#carinacaptionveranda{-webkit-animation-name:zoom; -webkit-animation-duration:0.6s; animation-name:zoom; animation-duration: 0.6s;}*/
+@-webkit-keyframes zoom{from{-webkit-transform:scale(0)} to{-webkit-/transform:scale(1)}}
+@keyframes zoom{from{transform:scale(0)} to{transform:scale(1)}}
+.carinaverandaclose{position: absolute; top: 15px;right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold;/transition: 0.3s;}
+.carinaverandaclose:hover,
+.carinaverandaclose:focus{color: #bbb;text-decoration: none;cursor: pointer;}
+@media only screen and(max-width: 700px;){.modladcontentcarinaveranda{width: 100%;}}
+/*---------veranda MODAL 1 end-----*/
+
+
+/*---------kitchen MODAL 2-----*/
+
+#carinaimg{border-radius: 5px; cursor: pointer; /transition: 0.3s;}
+#carinaimg:hover{opacity: 0.7;}
+
+.carinakitchenMODAL{display: none; position: fixed; z-index: 1; padding-top:200px; left: 0; top: 0; width: 100%; height: 100%;overflow: auto; background-color: rgba(0,0,0,0.9); background-color: rgb(0,0,0); }
+.modladcontentcarina{margin:auto; display: block; width: 80%; max-width: 700px;}
+#carinacaptionkitchen{font-family: arial; font-size: 30px;margin:auto; display: block; width: 80%; max-width: 700px; text-align: center;color: #ccc;padding: 10px 0;height: 150px;}
+/*.modladcontentcarina,#carinacaptionkitchen{-webkit-animation-name:zoom; -webkit-animation-duration:0.6s; animation-name:zoom; animation-duration: 0.6s;}*/
+@-webkit-keyframes zoom{from{-webkit-/transform:scale(0)} to{-webkit-/transform:scale(1)}}
+@keyframes zoom{from{/transform:scale(0)} to{/transform:scale(1)}}
+.carinakitchenclose{position: absolute; top: 15px;right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold;/transition: 0.3s;}
+.carinakitchenclose:hover,
+.carinakitchenclose:focus{color: #bbb;text-decoration: none;cursor: pointer;}
+
+/*---------kitchen MODAL 2 end-----*/
+
+/*---------livingroom MODAL 2-----*/
+
+#carinalivingroom{border-radius: 5px; cursor: pointer; //transition: 0.3s;}
+#carinalivingroom:hover{opacity: 0.7;}
+
+.carinalivingroomMODAL{display: none; position: fixed; z-index: 1; padding-top:200px; left: 0; top: 0; width: 100%; height: 100%;overflow: auto; background-color: rgba(0,0,0,0.9); background-color: rgb(0,0,0); }
+.modladcontentcarinalivingroom{margin:auto; display: block; width: 80%; max-width: 700px;}
+#carinacaptionlivingroom{font-family: arial; font-size: 30px;margin:auto; display: block; width: 80%; max-width: 700px; text-align: center;color: #ccc;padding: 10px 0;height: 150px;}
+/*.modladcontentcarinalivingroom,#carinacaptionlivingroom{-webkit-animation-name:zoom; -webkit-animation-duration:0.6s; animation-name:zoom; animation-duration: 0.6s;}*/
+@-webkit-keyframes zoom{from{-webkit-trasform:scale(0)} to{-webkit-/transform:scale(1)}}
+@keyframes zoom{from{/transform:scale(0)} to{/transform:scale(1)}}
+.carinalivingroomclose{position:absolute;top: 15px;right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold;/transition: 0.3s;}
+.carinalivingroomclose:hover,
+.carinalivingroomclose:focus{color: #bbb;text-decoration: none;cursor: pointer;}
+@media only screen and(max-width: 700px;){.modladcontentcarinalivingroom{width: 100%;}}
+/*---------livingroom MODAL 2 end-----*/
+
+/*---------bathroom MODAL 2-----*/
+
+#carinabathroom{border-radius: 5px; cursor: pointer; /transition: 0.3s;}
+#carinabathroom:hover{opacity: 0.7;}
+
+.carinabathroomMODAL{display: none; position: fixed; z-index: 1; padding-top:70px; left: 0; top: 0; width: 100%; height: 100%;overflow: auto; background-color: rgba(0,0,0,0.9); background-color: rgb(0,0,0); }
+.modladcontentcarinabathroom{margin:auto; display: block; width: 80%; max-width: 700px;}
+#carinacaptionbathroom{font-family: arial; font-size: 30px;margin:auto; display: block; width: 80%; max-width: 700px; text-align: center;color: #ccc;padding: 10px 0;height: 150px;}
+/*.modladcontentcarinabathroom,#carinacaptionbathroom{-webkit-animation-name:zoom; -webkit-animation-duration:0.6s; animation-name:zoom; animation-duration: 0.6s;}*/
+@-webkit-keyframes zoom{from{-webkit-trasform:scale(0)} to{-webkit-/transform:scale(1)}}
+@keyframes zoom{from{/transform:scale(0)} to{/transform:scale(1)}}
+.carinabathroomclose{position: absolute; top: 15px;right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold;/transition: 0.3s;}
+.carinabathroomclose:hover,
+.carinabathroomclose:focus{color: #bbb;text-decoration: none;cursor: pointer;}
+@media only screen and(max-width: 700px;){.modladcontentcarinabathroom{width: 100%;}}
+/*---------bathroom MODAL 2 end-----*/
+
+
+
+
+
+/*---------RoomRates2--------*/
+.captionfrocellita{font-family: arial; font-size: 24px;}
+.paragraphfrocellita{font-family:Arial Narrow;font-size: 20px;}
+.room-button2{margin-bottom: 4%; background-color: white; color: black; border: 2px solid #008CBA; width: 100%; height: 50px; border-radius: 2px;}
+.room-button2:hover{background-color: #008CBA;color: white;}
+
+
+
+/*---------RoomRates MODAL 2--------*/
+
+
+.frocellitaheader>h2{margin-top:0px;}
+.frocellitaheader{font-family: verdana; margin-top: 0px; font-size: 16px; text-align: center;}
+
+
+
+.frocellitaicon1>span:before{content:url("../image/user-icon.png");background-size: 1px 1px;position: relative;top:0px;right: 9px;}
+.frocellitaicon2>span:before{content:url("../image/Bed-icon.png");background-size: 1px 1px;position: relative;top:0px;right: 9px;}
+.frocellitaicon3>span:before{content:url("../image/Phone-icon.png");background-size: 1px 1px;position: relative;top:0px;right: 9px;}
+.frocellitaicon4>span:before{content:url("../image/Air-icon.png");background-size: 1px 1px;position: relative;top:0px;right: 9px;}
+.frocellitaallfeatures{text-align: left;}
+.frocellitaicon5>span:before{content:url("../image/TV-icon.png");background-size: 1px 1px;position: relative;top:0px;right: 9px;}
+.frocellitaicon6>span:before{content:url("../image/wifi-icon.png");background-size: 1px 1px;position: relative;top:0px;right: 9px;}
+.frocellitaicon7>span:before{content:url("../image/applaincess-icon.png");background-size: 1px 1px;position: relative;top:0px;right: 9px;}
+.frocellitaicon8>span:before{content:url("../image/Hot-icon.png");background-size: 1px 1px;position: relative;top:0px;right: 9px;}
+.frocellitaicon9>span:before{content:url("../image/Mic-icon.png");background-size: 1px 1px;position: relative;top:0px;right: 9px;}
+.frocellitaicon1,.frocellitaicon2,.frocellitaicon3,.frocellitaicon4,.frocellitaicon5,.frocellitaicon6,.frocellitaicon7,.frocellitaicon8,.frocellitaicon9{font-size: 15px;text-align: left; margin-left: 30px;}
+
+
+.frocellitaroomtable{border-radius: 5px;margin-left: 30px;margin-right: 50px; border:1px solid rgba(0,0,225, 0.1);padding-top:5px; }
+
+.frocellitaPhotos{margin-top: 10px; display: block;padding-left: 2px;padding-right: 2px; border:none;font-size: 11px;}
+fieldset{border-radius: 5px;}
+legend{font-size: 24px; text-align: left;}
+.frocellitathumbnail1{margin:5px;  border: 1px solid #ddd; border-radius: 4px; padding: 5px;display:inline-block;position:relative;}
+.frocellitathumbnail1:hover{box-shadow: 0 0 2px 1px rgba(0,140,186,0.5);}
+.frocellitaIMG1{position: relative;}
+.frocellitaIMG1{text-align: center;font-size: 12px;}
+
+.frocellitathumbnail2{margin:5px;border: 1px solid #ddd; border-radius: 4px; padding: 5px;display:inline-block;position:relative;}
+.frocellitathumbnail2:hover{box-shadow: 0 0 2px 1px rgba(0,140,186,0.5);}
+.frocellitaIMG2{position: relative;}
+.frocellitaIMG2{text-align: center;font-size: 12px;}
+
+.frocellitathumbnail3{margin:5px;border: 1px solid #ddd; border-radius: 4px; padding: 5px;display:inline-block;position:relative;}
+.frocellitathumbnail3:hover{box-shadow: 0 0 2px 1px rgba(0,140,186,0.5);}
+.frocellitaIMG3{position: relative;}
+.frocellitaIMG3{text-align: center;font-size: 12px;}
+
+.Pricesfrocellita{color: red;}
+.labelprifrocellita{color: black;}
+
+/*---------frocellita bathroom MODAL 2-----*/
+
+#frocellitabathroom{border-radius: 5px; cursor: pointer; /transition: 0.3s;}
+#frocellitabathroom:hover{opacity: 0.7;}
+
+.frocellitathroomMODAL{display: none; position: fixed; z-index: 1; padding-top:40px; left: 0; top: 0; width: 100%; height: 100%;overflow: auto; background-color: rgba(0,0,0,0.9); background-color: rgb(0,0,0); }
+.modladcontentfrocellitabathroom{margin:auto; display: block; width: 80%; max-width: 700px;}
+#frocellitacaptionbathroom{font-family: arial; font-size: 30px;margin:auto; display: block; width: 80%; max-width: 700px; text-align: center;color: #ccc;padding: 10px 0;height: 150px;}
+/*.modladcontentfrocellitabathroom,#frocellitacaptionbathroom{-webkit-animation-name:zoom; -webkit-animation-duration:0.6s; animation-name:zoom; animation-duration: 0.6s;}*/
+@-webkit-keyframes zoom{from{-webkit-trasform:scale(0)} to{-webkit-/transform:scale(1)}}
+@keyframes zoom{from{/transform:scale(0)} to{/transform:scale(1)}}
+.frocellitabathroomclose{position: absolute; top: 15px;right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold;/transition: 0.3s;}
+.frocellitabathroomclose:hover,
+.frocellitabathroomclose:focus{color: #bbb;text-decoration: none;cursor: pointer;}
+@media only screen and(max-width: 700px;){.modladcontentfrocellitabathroom{width: 100%;}}
+/*---------frocellita bathroom MODAL 2 end-----*/
+
+/*--------frocellita kitchen MODAL 2-----*/
+
+#frocellitakitchen{border-radius: 5px; cursor: pointer; /transition: 0.3s;}
+#frocellitakitchen:hover{opacity: 0.7;}
+
+.frocellitakitchenMODAL{display: none; position: fixed; z-index: 1; padding-top:200px; left: 0; top: 0; width: 100%; height: 100%;overflow: auto; background-color: rgba(0,0,0,0.9); background-color: rgb(0,0,0); }
+.modladcontentfrocellita{margin:auto; display: block; width: 80%; max-width: 700px;}
+#kitchencaptionkitchen{font-family: arial; font-size: 30px; margin:auto; display: block; width: 80%; max-width: 700px; text-align: center;color: #ccc;padding: 10px 0;height: 150px;}
+/*.modladcontentfrocellita,#kitchencaptionkitchen{-webkit-animation-name:zoom; -webkit-animation-duration:0.6s; animation-name:zoom; animation-duration: 0.6s;}*/
+@-webkit-keyframes zoom{from{-webkit-trasform:scale(0)} to{-webkit-/transform:scale(1)}}
+@keyframes zoom{from{/transform:scale(0)} to{/transform:scale(1)}}
+.frocellitakitchenclose{position: absolute; top: 15px;right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold;/transition: 0.3s;}
+.frocellitakitchenclose:hover,
+.frocellitakitchenclose:focus{color: #bbb;text-decoration: none;cursor: pointer;}
+@media only screen and(max-width: 700px;){.modladcontentfrocellita{width: 100%;}}
+/*---------frocellita kitchen MODAL 2 end-----*/
+
+/*--------frocellita living room MODAL 2-----*/
+
+#frocellitalivingroom{border-radius: 5px; cursor: pointer; /transition: 0.3s;}
+#frocellitalivingroom:hover{opacity: 0.7;}
+
+.frocellitalivingroomMODAL{display: none; position: fixed; z-index: 1; padding-top:200px; left: 0; top: 0; width: 100%; height: 100%;overflow: auto; background-color: rgba(0,0,0,0.9); background-color: rgb(0,0,0); }
+.modladcontentfrocellitalivingroom{margin:auto; display: block; width: 80%; max-width: 700px;}
+#kitchencaptionlivingroom{font-family: arial; font-size: 30px;margin:auto; display: block; width: 80%; max-width: 700px; text-align: center;color: #ccc;padding: 10px 0;height: 150px;}
+/*.modladcontentfrocellitalivingroom,#kitchencaptionlivingroom{-webkit-animation-name:zoom; -webkit-animation-duration:0.6s; animation-name:zoom; animation-duration: 0.6s;}*/
+@-webkit-keyframes zoom{from{-webkit-trasform:scale(0)} to{-webkit-/transform:scale(1)}}
+@keyframes zoom{from{/transform:scale(0)} to{/transform:scale(1)}}
+.frocellitalivingroomclose{position: absolute; top: 15px;right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold;/transition: 0.3s;}
+.frocellitalivingroomclose:hover,
+.frocellitalivingroomclose:focus{color: #bbb;text-decoration: none;cursor: pointer;}
+@media only screen and(max-width: 700px;){.modladcontentfrocellitalivingroom{width: 100%;}}
+/*---------frocellita living room MODAL 2 end-----*/
+
+
+
+
+
+/*---------RoomRates3--------*/
+
+.captionveronica{font-family: arial; font-size: 24px;}
+.paragraphveronica{font-family:Arial Narrow; font-size: 20px;}
+.room-button3{margin-bottom: 4%;background-color: white; color: black; border: 2px solid #008CBA; width: 100%; height: 50px; border-radius: 2px;}
+.room-button3:hover{background-color: #008CBA;color: white;}
+
+
+
+/*---------RoomRates MODAL 3--------*/
+
+.veronicataheader>h2{margin-top:0px;}
+.veronicataheader{font-family: verdana; margin-top: 0px; font-size: 16px; text-align: center;}
+
+
+
+.veronicataicon1>span:before{content:url("../image/user-icon.png");background-size: 1px 1px;position: relative;top:0px;right: 9px;}
+.veronicaicon2>span:before{content:url("../image/Bed-icon.png");background-size: 1px 1px;position: relative;top:0px;right: 9px;}
+.veronicaicon3>span:before{content:url("../image/Phone-icon.png");background-size: 1px 1px;position: relative;top:0px;right: 9px;}
+.veronicaicon4>span:before{content:url("../image/Air-icon.png");background-size: 1px 1px;position: relative;top:0px;right: 9px;}
+.veronicaallfeatures{text-align: left;}
+.veronicaicon5>span:before{content:url("../image/TV-icon.png");background-size: 1px 1px;position: relative;top:0px;right: 9px;}
+.veronicaicon6>span:before{content:url("../image/wifi-icon.png");background-size: 1px 1px;position: relative;top:0px;right: 9px;}
+.veronicaicon7>span:before{content:url("../image/applaincess-icon.png");background-size: 1px 1px;position: relative;top:0px;right: 9px;}
+.veronicaicon8>span:before{content:url("../image/Hot-icon.png");background-size: 1px 1px;position: relative;top:0px;right: 9px;}
+.veronicaicon9>span:before{content:url("../image/Mic-icon.png");background-size: 1px 1px;position: relative;top:0px;right: 9px;}
+.veronicataicon1,.veronicaicon2,.veronicaicon3,.veronicaicon4,.veronicaicon5,.veronicaicon6,.veronicaicon7,.veronicaicon8,.veronicaicon9{font-size: 15px;text-align: left; margin-left: 30px;}
+.veronicaPhotos{margin-top: 10px; display: block;padding-left: 2px;padding-right: 2px; border:none;font-size: 11px;}
+fieldset{border-radius: 5px;}
+legend{font-size: 24px; text-align: left;}
+.veronicathumbnail1{margin:5px;  border: 1px solid #ddd; border-radius: 4px; padding: 5px; width: 140px;display:inline-block;position:relative;}
+.veronicathumbnail1:hover{box-shadow: 0 0 2px 1px rgba(0,140,186,0.5);}
+.veronicaIMG1{position: relative;}
+.veronicaIMG1{text-align: center;font-size: 12px;}
+
+.veronicathumbnail2{margin:5px;border: 1px solid #ddd; border-radius: 4px; padding: 5px; width: 140px;display:inline-block;position:relative;}
+.veronicathumbnail2:hover{box-shadow: 0 0 2px 1px rgba(0,140,186,0.5);}
+.veronicaIMG2{position: relative;}
+.veronicaIMG2{text-align: center;font-size: 12px;}
+
+.veronicathumbnail3{margin:5px;border: 1px solid #ddd; border-radius: 4px; padding: 5px; width: 140px;display:inline-block;position:relative;}
+.veronicathumbnail3:hover{box-shadow: 0 0 2px 1px rgba(0,140,186,0.5);}
+.veronicaIMG3{position: relative;}
+.veronicaIMG3{text-align: center;font-size: 12px;}
+
+
+
+.Pricesveronica{color: red;}
+.labelpriveronica{color: black;}
+
+/*---------veronica bathroom MODAL 2-----*/
+
+#veronicabathroom{border-radius: 5px; cursor: pointer; /transition: 0.3s;}
+#veronicabathroom:hover{opacity: 0.7;}
+
+.veronicathroomMODAL{display: none; position: fixed; z-index: 1; padding-top:220px; left: 0; top: 0; width: 100%; height: 100%;overflow: auto; background-color: rgba(0,0,0,0.9); background-color: rgb(0,0,0); }
+.modladcontentveronicabathroom{margin:auto; display: block; width: 80%; max-width: 700px;}
+#veronicacaptionbathroom{font-family: arial; font-size: 30px;margin:auto; display: block; width: 80%; max-width: 700px; text-align: center;color: #ccc;padding: 10px 0;height: 150px;}
+/*.modladcontentveronicabathroom,#veronicacaptionbathroom{-webkit-animation-name:zoom; -webkit-animation-duration:0.6s; animation-name:zoom; animation-duration: 0.6s;}*/
+@-webkit-keyframes zoom{from{-webkit-trasform:scale(0)} to{-webkit-/transform:scale(1)}}
+@keyframes zoom{from{/transform:scale(0)} to{/transform:scale(1)}}
+.veronicabathroomclose{position: absolute; top: 15px;right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold;/transition: 0.3s;}
+.veronicabathroomclose:hover,
+.veronicabathroomclose:focus{color: #bbb;text-decoration: none;cursor: pointer;}
+@media only screen and(max-width: 700px;){.modladcontentveronicabathroom{width: 100%;}}
+/*---------veronica bathroom MODAL 2 end-----*/
+
+/*---------veronica kitchen MODAL 2-----*/
+
+#veronicakitchen{border-radius: 5px; cursor: pointer; /transition: 0.3s;}
+#veronicakitchen:hover{opacity: 0.7;}
+
+.veronicakitchenMODAL{display: none; position: fixed; z-index: 1; padding-top:200px; left: 0; top: 0; width: 100%; height: 100%;overflow: auto; background-color: rgba(0,0,0,0.9); background-color: rgb(0,0,0); }
+.modladcontentveronicakitchen{margin:auto; display: block; width: 80%; max-width: 700px;}
+#kitchencaptionkitchenveronica{font-family: arial; font-size: 30px;margin:auto; display: block; width: 80%; max-width: 700px; text-align: center;color: #ccc;padding: 10px 0;height: 150px;}
+/*.modladcontentveronicakitchen,#kitchencaptionkitchenveronica{-webkit-animation-name:zoom; -webkit-animation-duration:0.6s; animation-name:zoom; animation-duration: 0.6s;}*/
+@-webkit-keyframes zoom{from{-webkit-/transform:scale(0)} to{-webkit-/transform:scale(1)}}
+@keyframes zoom{from{/transform:scale(0)} to{/transform:scale(1)}}
+.veronicakitchenclose{position: absolute; top: 15px;right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold;/transition: 0.3s;}
+.veronicakitchenclose:hover,
+.veronicakitchenclose:focus{color: #bbb;text-decoration: none;cursor: pointer;}
+@media only screen and(max-width: 700px;){.modladcontentveronica{width: 100%;}}
+/*---------veronica bathroom MODAL 2 end-----*/
+
+/*---------veronica living room MODAL 2-----*/
+
+#veronicaliving{border-radius: 5px; cursor: pointer; /transition: 0.3s;}
+#veronicaliving:hover{opacity: 0.7;}
+
+.veronicalivingroomMODAL{display: none; position: fixed; z-index: 1; padding-top:200px; left: 0; top: 0; width: 100%; height: 100%;overflow: auto; background-color: rgba(0,0,0,0.9); background-color: rgb(0,0,0); }
+.modladcontentveronicalivingroom{margin:auto; display: block; width: 80%; max-width: 700px;}
+#veronicacaptionlivingroom{font-family: arial; font-size: 30px;margin:auto; display: block; width: 80%; max-width: 700px; text-align: center;color: #ccc;padding: 10px 0;height: 150px;}
+/*.modladcontentveronicalivingroom,#veronicacaptionlivingroom{-webkit-animation-name:zoom; -webkit-animation-duration:0.6s; animation-name:zoom; animation-duration: 0.6s;}*/
+@-webkit-keyframes zoom{from{-webkit-trasform:scale(0)} to{-webkit-/transform:scale(1)}}
+@keyframes zoom{from{/transform:scale(0)} to{/transform:scale(1)}}
+.veronicatalivingroomclose{position: absolute; top: 15px;right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold;/transition: 0.3s;}
+.veronicatalivingroomclose:hover,
+.veronicatalivingroomclose:focus{color: #bbb;text-decoration: none;cursor: pointer;}
+@media only screen and(max-width: 700px;){.modladcontentveronicalivingroom{width: 100%;}}
+/*---------veronica room MODAL 2 end-----*/
+
+
+
+
+/*---------RoomRates4--------*/
+
+.captionramona{font-family: arial; font-size: 24px;}
+.paragraphramona{font-family:Arial Narrow;font-size: 20px; }
+.room-button4{margin-bottom: 4%; background-color: white; color: black; border: 2px solid #008CBA; width: 100%; height: 50px; border-radius: 2px;}
+.room-button4:hover{background-color: #008CBA;color: white;}
+
+
+/*---------RoomRates MODAL 4--------*/
+
+
+.ramonaheader>h2{margin-top:0px;}
+.ramonaheader{font-family: verdana; margin-top: 0px; font-size: 16px; text-align: center;}
+
+
+
+.ramonaicon1>span:before{content:url("../image/user-icon.png");background-size: 1px 1px;position: relative;top:0px;right: 9px;}
+.ramonaicon2>span:before{content:url("../image/Bed-icon.png");background-size: 1px 1px;position: relative;top:0px;right: 9px;}
+.ramonaicon3>span:before{content:url("../image/Phone-icon.png");background-size: 1px 1px;position: relative;top:0px;right: 9px;}
+.ramonacaicon4>span:before{content:url("../image/Air-icon.png");background-size: 1px 1px;position: relative;top:0px;right: 9px;}
+.ramonaallfeatures{text-align: left;}
+.ramonaicon5>span:before{content:url("../image/TV-icon.png");background-size: 1px 1px;position: relative;top:0px;right: 9px;}
+.ramonaicon6>span:before{content:url("../image/wifi-icon.png");background-size: 1px 1px;position: relative;top:0px;right: 9px;}
+.ramonaicon7>span:before{content:url("../image/applaincess-icon.png");background-size: 1px 1px;position: relative;top:0px;right: 9px;}
+.ramonaicon8>span:before{content:url("../image/Hot-icon.png");background-size: 1px 1px;position: relative;top:0px;right: 9px;}
+.ramonaicon9>span:before{content:url("../image/Mic-icon.png");background-size: 1px 1px;position: relative;top:0px;right: 9px;}
+.ramonaicon1,.ramonaicon2,.ramonaicon3,.ramonacaicon4,.ramonaicon5,.ramonaicon6,.ramonaicon7,.ramonaicon8,.ramonaicon9{font-size: 15px;text-align: left; margin-left: 30px;}
+
+.ramonaroomtable{border-radius: 5px;margin-left: 30px;margin-right: 50px; border:1px solid rgba(0,0,225, 0.1);padding-top:5px; }
+
+
+.ramonaPhotos{margin-top: 10px; display: block;padding-left: 2px;padding-right: 2px; border:none;font-size: 11px;}
+fieldset{border-radius: 5px;}
+legend{font-size: 24px; text-align: left;}
+.ramonathumbnail1{margin:5px;  border: 1px solid #ddd; border-radius: 4px; padding: 5px; width: 140px;display:inline-block;position:relative;}
+.ramonathumbnail1:hover{box-shadow: 0 0 2px 1px rgba(0,140,186,0.5);}
+.ramonaIMG1{position: relative;}
+.ramonaIMG1{text-align: center;font-size: 12px;}
+
+.ramonathumbnail2{margin:5px;border: 1px solid #ddd; border-radius: 4px; padding: 5px; width: 140px;display:inline-block;position:relative;}
+.ramonathumbnail2:hover{box-shadow: 0 0 2px 1px rgba(0,140,186,0.5);}
+.ramonaIMG2{position: relative;}
+.ramonaIMG2{text-align: center;font-size: 12px;}
+
+.ramonathumbnail3{margin:5px;border: 1px solid #ddd; border-radius: 4px; padding: 5px; width: 140px;display:inline-block;position:relative;}
+.veronicathumbnail3:hover{box-shadow: 0 0 2px 1px rgba(0,140,186,0.5);}
+.ramonaIMG3{position: relative;}
+.ramonaIMG3{text-align: center;font-size: 12px;}
+
+
+.Pricesramona{color: red;}
+.labelpriramona{color: black;}
+
+
+/*---------ramona bathroom MODAL 2-----*/
+
+#ramonabathroom{border-radius: 5px; cursor: pointer; /transition: 0.3s;}
+#ramonabathroom:hover{opacity: 0.7;}
+
+.veronicathroomMODAL{display: none; position: fixed; z-index: 1; padding-top:80px; left: 0; top: 0; width: 100%; height: 100%;overflow: auto; background-color: rgba(0,0,0,0.9); background-color: rgb(0,0,0); }
+.modladcontentramonabathroom{margin:auto; display: block; width: 80%; max-width: 700px;}
+#ramonacaptionbathroom{font-family: arial; font-size: 30px;margin:auto; display: block; width: 80%; max-width: 700px; text-align: center;color: #ccc;padding: 10px 0;height: 150px;}
+/*.modladcontentramonabathroom,#ramonacaptionbathroom{-webkit-animation-name:zoom; -webkit-animation-duration:0.6s; animation-name:zoom; animation-duration: 0.6s;}*/
+@-webkit-keyframes zoom{from{-webkit-trasform:scale(0)} to{-webkit-/transform:scale(1)}}
+@keyframes zoom{from{/transform:scale(0)} to{/transform:scale(1)}}
+.ramonabathroomclose{position: absolute; top: 15px;right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold;/transition: 0.3s;}
+.ramonabathroomclose:hover,
+.ramonabathroomclose:focus{color: #bbb;text-decoration: none;cursor: pointer;}
+@media only screen and(max-width: 700px;){.modladcontentramonabathroom{width: 100%;}}
+
+/*---------ramona bathroom room MODAL 2-----*/
+
+
+
+/*---------ramona kitchen MODAL 2-----*/
+
+#ramonakitchen{border-radius: 5px; cursor: pointer; /transition: 0.3s;}
+#ramonakitchen:hover{opacity: 0.7;}
+
+.ramonakitchenroomMODAL{display: none; position: fixed; z-index: 1; padding-top:200px; left: 0; top: 0; width: 100%; height: 100%;overflow: auto; background-color: rgba(0,0,0,0.9); background-color: rgb(0,0,0); }
+.modladcontentramonakitchen{margin:auto; display: block; width: 80%; max-width: 700px;}
+#ramonacaptionkitchen{font-family: arial; font-size: 30px;margin:auto; display: block; width: 80%; max-width: 700px; text-align: center;color: #ccc;padding: 10px 0;height: 150px;}
+/*.modladcontentramonakitchen,#ramonacaptionkitchen{-webkit-animation-name:zoom; -webkit-animation-duration:0.6s; animation-name:zoom; animation-duration: 0.6s;}*/
+@-webkit-keyframes zoom{from{-webkit-trasform:scale(0)} to{-webkit-/transform:scale(1)}}
+@keyframes zoom{from{/transform:scale(0)} to{/transform:scale(1)}}
+.ramonakitchenclose{position: absolute; top: 15px;right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold;/transition: 0.3s;}
+.ramonakitchenclose:hover,
+.ramonakitchenclose:focus{color: #bbb;text-decoration: none;cursor: pointer;}
+@media only screen and(max-width: 700px;){.modladcontentramonakitchen{width: 100%;}}
+
+/*---------ramona kitchen room MODAL 2-----*/
+
+
+/*---------ramona living MODAL 2-----*/
+
+#ramonaliving{border-radius: 5px; cursor: pointer; /transition: 0.3s;}
+#ramonaliving:hover{opacity: 0.7;}
+
+.ramonalivingroomMODAL{display: none; position: fixed; z-index: 1; padding-top:200px; left: 0; top: 0; width: 100%; height: 100%;overflow: auto; background-color: rgba(0,0,0,0.9); background-color: rgb(0,0,0); }
+.modladcontentramonaliving{margin:auto; display: block; width: 80%; max-width: 700px;}
+#ramonacaptionliving{font-family: arial; font-size: 30px;margin:auto; display: block; width: 80%; max-width: 700px; text-align: center;color: #ccc;padding: 10px 0;height: 150px;}
+/*.modladcontentramonaliving,#ramonacaptionliving{-webkit-animation-name:zoom; -webkit-animation-duration:0.6s; animation-name:zoom; animation-duration: 0.6s;}*/
+@-webkit-keyframes zoom{from{-webkit-trasform:scale(0)} to{-webkit-/transform:scale(1)}}
+@keyframes zoom{from{/transform:scale(0)} to{/transform:scale(1)}}
+.ramonalivingclose{position: absolute; top: 15px;right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold;/transition: 0.3s;}
+.ramonalivingclose:hover,
+.ramonalivingclose:focus{color: #bbb;text-decoration: none;cursor: pointer;}
+
+
+/*---------ramona living room MODAL 2-----*/
+
+
+/*---------RoomRates5--------*/
+
+.captionsylvia{font-family: arial; font-size: 24px;}
+.paragraphsylvia{font-family:Arial Narrow;font-size: 20px;}
+.room-button5{margin-bottom: 4%;background-color: white; color: black; border: 2px solid #008CBA; width: 100%; height: 50px; border-radius: 2px;}
+.room-button5:hover{background-color: #008CBA;color: white;}
+
+/*---------RoomRates MODAL 5--------*/
+
+
+
+.sylviaheader>h2{margin-top:0px;}
+.sylviaheaderr{font-family: verdana; margin-top: 0px; font-size: 16px; text-align: center;}
+
+
+
+.sylviaicon1>span:before{content:url("../image/user-icon.png");background-size: 1px 1px;position: relative;top:0px;right: 9px;}
+.sylviaicon2>span:before{content:url("../image/Bed-icon.png");background-size: 1px 1px;position: relative;top:0px;right: 9px;}
+.sylviaicon3>span:before{content:url("../image/Phone-icon.png");background-size: 1px 1px;position: relative;top:0px;right: 9px;}
+.sylviacaicon4>span:before{content:url("../image/Air-icon.png");background-size: 1px 1px;position: relative;top:0px;right: 9px;}
+.sylviaallfeatures{text-align: left;}
+.sylviaicon5>span:before{content:url("../image/TV-icon.png");background-size: 1px 1px;position: relative;top:0px;right: 9px;}
+.sylviaicon6>span:before{content:url("../image/wifi-icon.png");background-size: 1px 1px;position: relative;top:0px;right: 9px;}
+.sylviaicon7>span:before{content:url("../image/applaincess-icon.png");background-size: 1px 1px;position: relative;top:0px;right: 9px;}
+.sylviaicon8>span:before{content:url("../image/Hot-icon.png");background-size: 1px 1px;position: relative;top:0px;right: 9px;}
+.sylviaicon9>span:before{content:url("../image/Mic-icon.png");background-size: 1px 1px;position: relative;top:0px;right: 9px;}
+.sylviaicon1,.sylviaicon2,.sylviaicon3,.sylviacaicon4,.sylviaicon5,.sylviaicon6,.sylviaicon7,.sylviaicon8,.sylviaicon9{font-size: 15px;text-align: left; margin-left: 30px;}
+
+.sylviaroomtable{border-radius: 5px;margin-left: 30px;margin-right: 50px; border:1px solid rgba(0,0,225, 0.1);padding-top:5px; }
+
+
+.sylviaPhotos{margin-top: 10px; display: block;padding-left: 2px;padding-right: 2px; border:none;font-size: 11px;}
+fieldset{border-radius: 5px;}
+legend{font-size: 24px; text-align: left;}
+.sylviathumbnail1{margin:5px;  border: 1px solid #ddd; border-radius: 4px; padding: 5px; width: 140px;display:inline-block;position:relative;}
+.sylviathumbnail1:hover{box-shadow: 0 0 2px 1px rgba(0,140,186,0.5);}
+.sylviaIMG1{position: relative;}
+.sylviaIMG1{text-align: center;font-size: 12px;}
+
+.sylviathumbnail2{margin:5px;border: 1px solid #ddd; border-radius: 4px; padding: 5px; width: 140px;display:inline-block;position:relative;}
+.sylviathumbnail2:hover{box-shadow: 0 0 2px 1px rgba(0,140,186,0.5);}
+.sylviaIMG2{position: relative;}
+.sylviaIMG2{text-align: center;font-size: 12px;}
+
+.sylviathumbnail3{margin:5px;border: 1px solid #ddd; border-radius: 4px; padding: 5px; width: 140px;display:inline-block;position:relative;}
+.sylviathumbnail3:hover{box-shadow: 0 0 2px 1px rgba(0,140,186,0.5);}
+.sylviaIMG3{position: relative;}
+.sylviaIMG3{text-align: center;font-size: 12px;}
+
+
+.Pricessylvia{color: red;}
+.labelprisylvia{color: black;}
+
+
+/*---------sylvia bathroom MODAL 2-----*/
+
+#sylviabathroom{border-radius: 5px; cursor: pointer; /transition: 0.3s;}
+#sylviabathroom:hover{opacity: 0.7;}
+
+.sylviathroomMODAL{display: none; position: fixed; z-index: 1; padding-top:200px; left: 0; top: 0; width: 100%; height: 100%;overflow: auto; background-color: rgba(0,0,0,0.9); background-color: rgb(0,0,0); }
+.modladcontentsylviabathroom{margin:auto; display: block; width: 80%; max-width: 700px;}
+#sylviacaptionbathroom{font-family: arial; font-size: 30px;margin:auto; display: block; width: 80%; max-width: 700px; text-align: center;color: #ccc;padding: 10px 0;height: 150px;}
+/*.modladcontentsylviabathroom,#sylviacaptionbathroom{-webkit-animation-name:zoom; -webkit-animation-duration:0.6s; animation-name:zoom; animation-duration: 0.6s;}*/
+@-webkit-keyframes zoom{from{-webkit-trasform:scale(0)} to{-webkit-/transform:scale(1)}}
+@keyframes zoom{from{/transform:scale(0)} to{/transform:scale(1)}}
+.sylviabathroomclose{position: absolute; top: 15px;right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold;/transition: 0.3s;}
+.sylviabathroomclose:hover,
+.sylviabathroomclose:focus{color: #bbb;text-decoration: none;cursor: pointer;}
+@media only screen and(max-width: 700px;){.modladcontentsylviabathroom{width: 100%;}}
+
+/*---------sylvia bathroom room MODAL 2-----*/
+
+/*---------sylvia kitchen MODAL 2-----*/
+
+#sylviakitchen{border-radius: 5px; cursor: pointer; /transition: 0.3s;}
+#sylviakitchen:hover{opacity: 0.7;}
+
+.sylviakitchenroomMODAL{display: none; position: fixed; z-index: 1; padding-top:200px; left: 0; top: 0; width: 100%; height: 100%;overflow: auto; background-color: rgba(0,0,0,0.9); background-color: rgb(0,0,0); }
+.modladcontentsylviakitchen{margin:auto; display: block; width: 80%; max-width: 700px;}
+#sylviacaptionkitchen{font-family: arial; font-size: 30px;margin:auto; display: block; width: 80%; max-width: 700px; text-align: center;color: #ccc;padding: 10px 0;height: 150px;}
+/*.modladcontentsylviakitchen,#sylviacaptionkitchen{-webkit-animation-name:zoom; -webkit-animation-duration:0.6s; animation-name:zoom; animation-duration: 0.6s;}*/
+@-webkit-keyframes zoom{from{-webkit-trasform:scale(0)} to{-webkit-/transform:scale(1)}}
+@keyframes zoom{from{/transform:scale(0)} to{/transform:scale(1)}}
+.sylviakitchenclose{position: absolute; top: 15px;right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold;/transition: 0.3s;}
+.sylviakitchenclose:hover,
+.sylviakitchenclose:focus{color: #bbb;text-decoration: none;cursor: pointer;}
+@media only screen and(max-width: 700px;){.modladcontentsylviakitchen{width: 100%;}}
+
+/*---------sylvia kitchen room MODAL 2-----*/
+
+/*---------sylvia living MODAL 2-----*/
+
+#sylvialiving{border-radius: 5px; cursor: pointer; /transition: 0.3s;}
+#sylvialiving:hover{opacity: 0.7;}
+
+.sylvialivingroomMODAL{display: none; position: fixed; z-index: 1; padding-top:200px; left: 0; top: 0; width: 100%; height: 100%;overflow: auto; background-color: rgba(0,0,0,0.9); background-color: rgb(0,0,0); }
+.modladcontentsylvialiving{margin:auto; display: block; width: 80%; max-width: 700px;}
+#sylviacaptionliving{font-family: arial; font-size: 30px;margin:auto; display: block; width: 80%; max-width: 700px; text-align: center;color: #ccc;padding: 10px 0;height: 150px;}
+/*.modladcontentsylvialiving,#sylviacaptionliving{-webkit-animation-name:zoom; -webkit-animation-duration:0.6s; animation-name:zoom; animation-duration: 0.6s;}*/
+@-webkit-keyframes zoom{from{-webkit-trasform:scale(0)} to{-webkit-/transform:scale(1)}}
+@keyframes zoom{from{/transform:scale(0)} to{/transform:scale(1)}}
+.sylvialivingclose{position: absolute; top: 15px;right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold;/transition: 0.3s;}
+.sylvialivingclose:hover,
+.sylvialivingclose:focus{color: #bbb;text-decoration: none;cursor: pointer;}
+@media only screen and(max-width: 700px;){.modladcontentsylvialiving{width: 100%;}}
+
+/*---------sylvia living room MODAL 2-----*/
+
+
+
+
+
+
+
+
+
+/*---------RoomRates6--------*/
+
+.captionolivia{font-family: arial; font-size: 24px;}
+.paragrapholivia{font-family:Arial Narrow;font-size: 20px;}
+.room-button6{margin-bottom: 4%;background-color: white; color: black; border: 2px solid #008CBA; width: 100%; height: 50px; border-radius: 2px;}
+.room-button6:hover{background-color: #008CBA;color: white;}
+
+/*---------RoomRates MODAL 6--------*/
+
+
+
+.oliviaheader>h2{margin-top:0px;}
+.oliviaheader{font-family: verdana; margin-top: 0px; font-size: 16px; text-align: center;}
+
+.oliviaroomtable{border-radius: 5px;margin-left: 30px;margin-right: 50px; border:1px solid rgba(0,0,225, 0.1);padding-top:5px; }
+
+
+.oliviaPhotos{margin-top: 10px; display: block;padding-left: 2px;padding-right: 2px; border:none;font-size: 11px;}
+fieldset{border-radius: 5px;}
+legend{font-size: 24px; text-align: left;}
+.oliviathumbnail1{margin:5px;  border: 1px solid #ddd; border-radius: 4px; padding: 5px; width: 140px;display:inline-block;position:relative;}
+.oliviathumbnail1:hover{box-shadow: 0 0 2px 1px rgba(0,140,186,0.5);}
+.oliviaIMG1{position: relative;}
+.oliviaIMG1{text-align: center;font-size: 12px;}
+
+.oliviathumbnail2{margin:5px;border: 1px solid #ddd; border-radius: 4px; padding: 5px; width: 140px;display:inline-block;position:relative;}
+.oliviathumbnail2:hover{box-shadow: 0 0 2px 1px rgba(0,140,186,0.5);}
+.oliviaIMG2{position: relative;}
+.oliviaIMG2{text-align: center;font-size: 12px;}
+
+.oliviathumbnail3{margin:5px;border: 1px solid #ddd; border-radius: 4px; padding: 5px; width: 140px;display:inline-block;position:relative;}
+.oliviathumbnail3:hover{box-shadow: 0 0 2px 1px rgba(0,140,186,0.5);}
+.oliviaIMG3{position: relative;}
+.oliviaIMG3{text-align: center;font-size: 12px;}
+
+
+.Pricesolivia{color: red;}
+.labelpriolivia{color: black;}
+
+/*---------olivia bathroom MODAL 2-----*/
+
+#oliviabathroom{border-radius: 5px; cursor: pointer; /transition: 0.3s;}
+#oliviabathroom:hover{opacity: 0.7;}
+
+.oliviathroomMODAL{display: none; position: fixed; z-index: 1; padding-top:200px; left: 0; top: 0; width: 100%; height: 100%;overflow: auto; background-color: rgba(0,0,0,0.9); background-color: rgb(0,0,0); }
+.modladcontentoliviabathroom{margin:auto; display: block; width: 80%; max-width: 700px;}
+#oliviacaptionbathroom{font-family: arial; font-size: 30px;margin:auto; display: block; width: 80%; max-width: 700px; text-align: center;color: #ccc;padding: 10px 0;height: 150px;}
+/*.modladcontentoliviabathroom,#oliviacaptionbathroom{-webkit-animation-name:zoom; -webkit-animation-duration:0.6s; animation-name:zoom; animation-duration: 0.6s;}*/
+@-webkit-keyframes zoom{from{-webkit-trasform:scale(0)} to{-webkit-/transform:scale(1)}}
+@keyframes zoom{from{/transform:scale(0)} to{/transform:scale(1)}}
+.oliviabathroomclose{position: absolute; top: 15px;right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold;/transition: 0.3s;}
+.oliviabathroomclose:hover,
+.oliviabathroomclose:focus{color: #bbb;text-decoration: none;cursor: pointer;}
+
+/*---------olivia bathroom room MODAL 2-----*/
+
+/*---------olivia kitchen MODAL 2-----*/
+
+#oliviakitchen{border-radius: 5px; cursor: pointer; /transition: 0.3s;}
+#oliviakitchen:hover{opacity: 0.7;}
+
+.oliviakitchenroomMODAL{display: none; position: fixed; z-index: 1; padding-top:200px; left: 0; top: 0; width: 100%; height: 100%;overflow: auto; background-color: rgba(0,0,0,0.9); background-color: rgb(0,0,0); }
+.modladcontentoliviakitchen{margin:auto; display: block; width: 80%; max-width: 700px;}
+#oliviacaptionkitchen{font-family: arial; font-size: 30px;margin:auto; display: block; width: 80%; max-width: 700px; text-align: center;color: #ccc;padding: 10px 0;height: 150px;}
+/*.modladcontentoliviakitchen,#oliviacaptionkitchen{-webkit-animation-name:zoom; -webkit-animation-duration:0.6s; animation-name:zoom; animation-duration: 0.6s;}*/
+@-webkit-keyframes zoom{from{-webkit-trasform:scale(0)} to{-webkit-/transform:scale(1)}}
+@keyframes zoom{from{/transform:scale(0)} to{/transform:scale(1)}}
+.oliviakitchenclose{position: absolute; top: 15px;right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold;/transition: 0.3s;}
+.oliviakitchenclose:hover,
+.oliviakitchenclose:focus{color: #bbb;text-decoration: none;cursor: pointer;}
+
+/*---------olivia kitchen room MODAL 2-----*/
+
+/*---------olivia living MODAL 2-----*/
+
+#olivialiving{border-radius: 5px; cursor: pointer; /transition: 0.3s;}
+#olivialiving:hover{opacity: 0.7;}
+
+.olivialivingroomMODAL{display: none; position: fixed; z-index: 1; padding-top:200px; left: 0; top: 0; width: 100%; height: 100%;overflow: auto; background-color: rgba(0,0,0,0.9); background-color: rgb(0,0,0); }
+.modladcontentolivialiving{margin:auto; display: block; width: 80%; max-width: 700px;}
+#oliviacaptionliving{font-family: arial; font-size: 30px;margin:auto; display: block; width: 80%; max-width: 700px; text-align: center;color: #ccc;padding: 10px 0;height: 150px;}
+/*.modladcontentolivialiving,#oliviacaptionliving{-webkit-animation-name:zoom; -webkit-animation-duration:0.6s; animation-name:zoom; animation-duration: 0.6s;}*/
+@-webkit-keyframes zoom{from{-webkit-trasform:scale(0)} to{-webkit-/transform:scale(1)}}
+@keyframes zoom{from{/transform:scale(0)} to{/transform:scale(1)}}
+.olivialivingclose{position: absolute; top: 15px;right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold;/transition: 0.3s;}
+.olivialivingclose:hover,
+.olivialivingclose:focus{color: #bbb;text-decoration: none;cursor: pointer;}
+
+/*---------olivia living room MODAL 2-----*/
+.modal{
+    display:none;
+    position:fixed;
+    z-index:1;
+    padding:0 10px;
+    left:0;
+    top: 0;
+    width:100%;
+    height:100%;
+    overflow:auto;
+    background-color:rgba(0,0,0,0.8);
+}
+.modal-content{
+    background-color:whitesmoke;
+    border-radius:10px;
+    margin:50px auto;
+    padding:10px;
+    max-width: 600px; 
+    min-width: 200px; 
+    border:1px solid #888;
+    font-size:12pt;
+    font-family:calibri; 
+    text-align:center;
+    color:#222444;
+}
+
+@media screen and (max-width: 1275px){
+     .roomcard-1{
+        max-width: 500px;
+    }
+    .roomcard-1 .img{
+        width: 500px;
+    }
+    .roomcard-1 h3{
+        font-size: 13pt;
+    }
+     .roomcard-1 p{
+        font-size: 11pt;
+    }
+    .roomcard-1 button{
+        height: 40px;
+    }
+}
+@media screen and (max-width: 1275px){
+     .roomcard-1{
+        max-width: 450px;
+         
+    }
+    .roomcard-1 .img{
+        width: 450px;
+    }
+    .roomcard-1 label{
+        font-size: 11pt;
+    }
+    .roomcard-1 h3{
+        font-size: 13pt;
+    }
+     .roomcard-1 p{
+        font-size: 11pt;
+    }
+    .roomcard-1 button{
+        height: 40px;
+    }
+}
+@media screen and (max-width: 780px){
+    .modal{
+        max-width: 100%;
+       / overflow: hidden;
+        
+    }
+    .modal-content{
+        max-width: 400px;
+        margin: auto;
+    }
+    .roomcard-1{
+        max-width: 300px;
+    }
+    .roomcard-1 .img{
+        width: 300px;
+    }
+    .roomcard-1 h3{
+        font-size: 10pt;
+    }
+     .roomcard-1 p{
+        font-size:9pt;
+    }
+    .roomcard-1 button{
+        height: 30px;
+    }
+    
+}
+@media screen and (max-width: 480px){
+    .logo>h1>a>span{
+        font-size: 45pt;
+    }
+    .logo>h1{
+        font-size: 12pt;
+    }
+    .roomcard-1{
+        max-width: 250px;
+    }
+    .roomcard-1 .img{
+        width: 250px;
+    }
+    .roomcard-1 h3{
+        font-size: 10pt;
+    }
+     .roomcard-1 p{
+        font-size: 8pt;
+    }
+    .roomcard-1 button{
+        height: 30px;
+    }
+    .modal{
+        padding: 0;
+    }
+    .modal-content{
+        max-width: 200px;
+        margin: 0 auto;
+        overflow: auto;
+    }
+    .box span{
+        font-size:8pt!important;
+    }
+    .room-features h3{
+        font-size: 6pt!important;
+    }
+    tr{
+        width: 10px;
+    }
+    th,td{
+        padding: 10px !important;
+        font-size: 8pt !important; 
+    }
+    table{
+        max-width:200px;
+    }
+    .room-status{
+        padding: 0;
+    }
+    .room-status h2{
+        min-width: 200px;
+        font-size: 12pt;
+    }
+}
+.icon{
+    text-align: left;
+    margin: 0 10px;
+}
+.icon-person:before{
+    content: url(../glyph/person.png);
+}
+.icon-bed:before{
+    content: url(../glyph/bed.png);
+}
+.icon-phone:before{
+    content: url(../glyph/phone.png);
+}
+
+.icon-aircon:before{
+    content: url(../glyph/aircon.png);
+}
+
+.icon-tv:before{
+    content: url(../glyph/tv.png);
+}
+.icon-wifi:before{
+    content: url(../glyph/wifi.png);
+}
+.icon-apps:before{
+    content: url(../glyph/app.png);
+}
+.icon-tub:before{
+    content: url(../glyph/tub.png);
+}
+.icon-mic:before{
+    content: url(../glyph/mic.png);
+}
+.room-status{
+    max-width:500px;
+    margin: 10px auto;
+    border-radius: 20px; 
+    border:1px solid rgba(0,0,0,0);
+    background:rgba(1,0,0, 0.1);
+    color: black;
+    text-align: center;
+}
+.room-close>button{
+    font-size: 11pt;
+    position: relative; 
+    float: right !important;
+    background:whitesmoke;
+    border:2px solid #dddddd;
+    padding:0px 20px;
+    border-radius:5px;
+    
+}
+.room-close>button:focus {
+    color:#000;
+    text-decoration:none;
+    cursor:context-menu;
+    background:#dddddd;
+}
+.room-close>button:hover,
+.room-close {
+}
+.room-close:after{
+    display: block;
+    content: " ";
+    clear: both;
+}
+.roomsize h3{
+    text-align: center;
+}
+legend{
+    font-size: 12pt;
+}
+.box{
+  border: 1px solid #fc3187;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.modal h3{
+    margin: 0;
+    text-align: left;
+}
+.carinaheader>h2{margin-top:0px;}
+.carinaheader{font-family: verdana; margin-top: 0px; font-size: 16px; text-align: center;}text-align: left;}
+
+.allfeatures{text-align: left;}
+.roomtable{border-radius: 5px; margin: 0 auto;}
+th{
+    border-bottom:1px solid rgba(0,0,225, 0.2) !important;
+}
+th,td{
+    font-size:12pt ;
+    text-align: left;
+    border-bottom: none ;
+    border: 1px solid rgba(0,0,225, 0.2) ;
+    padding: 10px 50px;
+}
+.roomtable table{
+    border-collapse: collapse;
+    margin: 0 auto;
+  
+}
+
+.room-button{margin-bottom: 4%; background-color: white; color: black; border: 2px solid #fc3187; width: 100%; height: 50px; border-radius: 2px;}
+
+.room-button:hover{
+    background: #fc3187
+}
+.size{
+    text-align: center!important;
+}
